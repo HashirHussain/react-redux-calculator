@@ -1,5 +1,19 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { Provider } from "react-redux";
+
+import { store } from "./createStore";
+import Calculator from "./Calculator";
 import "./index.scss";
 
-ReactDOM.render(<h1>Hello world!</h1>, document.getElementById("root"));
+const Main = () => {
+  return (
+    <Provider store={store}>
+      <React.StrictMode>
+        <Calculator />
+      </React.StrictMode>
+    </Provider>
+  );
+};
+
+ReactDOM.render(<Main />, document.getElementById("root"));
