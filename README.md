@@ -1,2 +1,3 @@
 # react-redux-calculator
-react+redux calculator with Neumorphism design and unit testing
+
+react+redux calculator with Neumorphic design and unit testing

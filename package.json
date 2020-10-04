@@ -1,0 +1,38 @@
+{
+  "name": "react-redux-calculator",
+  "version": "1.0.0",
+  "description": "react+redux calculator with Neumorphic design and unit testing",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel src/index.html --open",
+    "build": "parcel build src/index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HashirHussain/react-redux-calculator.git"
+  },
+  "keywords": [
+    "react",
+    "redux",
+    "parceljs",
+    "Neumorphism",
+    "Neumorphic",
+    "Unit testing",
+    "calculator"
+  ],
+  "author": "Hashir Hussain",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HashirHussain/react-redux-calculator/issues"
+  },
+  "homepage": "https://github.com/HashirHussain/react-redux-calculator#readme",
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "sass": "^1.26.11"
+  }
+}
