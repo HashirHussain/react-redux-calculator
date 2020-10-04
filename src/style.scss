@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+$background-color: #e9e9e9;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: $background-color;
+    font-size: 20px;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin shadow {
+    box-shadow: -6px -6px 9px #fff, 6px 6px 9px rgba(#d3d3d3, 0.6);
+}
+
+@mixin shadow-inset {
+    box-shadow: inset -6px -6px 9px #fff, inset 6px 6px 9px rgba(#d3d3d3, 0.6);
+}
+
+.calculator {
+    @include shadow;
+    padding: 2rem;
+    border-radius: 1rem;
+
+    input,
+    button {
+        outline: none;
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+    }
+    input[type="text"] {
+        -moz-appearance: textfield;
+    }
+
+    input {
+        @include shadow-inset;
+        width: 100%;
+        height: 3rem;
+        text-align: right;
+        border: none;
+        border-radius: 0.5rem;
+        padding: 2rem 1rem;
+    }
+    .keypad {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0.8rem;
+        margin-top: 2rem;
+    }
+
+    button {
+        @include shadow;
+        height: 2rem;
+        border: none;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        background-color: $background-color;
+
+        &:hover,
+        &:active {
+            background-color: rgba(#d3d3d3, 0.6);
+        }
+
+        &:active {
+            @include shadow-inset;
+        }
+    }
+}

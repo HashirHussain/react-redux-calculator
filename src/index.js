@@ -4,7 +4,7 @@ import { Provider } from "react-redux";
 
 import { store } from "./createStore";
 import Calculator from "./Calculator";
-import "./index.scss";
+import "./style.scss";
 
 const Main = () => {
   return (
