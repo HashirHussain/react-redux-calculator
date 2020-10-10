@@ -1,0 +1,27 @@
+//https://css.gg/moon
+
+.gg-moon,
+.gg-moon::after {
+  display: block;
+  box-sizing: border-box;
+  border-radius: 50%;
+}
+.gg-moon {
+  overflow: hidden;
+  position: relative;
+  transform: rotate(-135deg) scale(var(--ggs, 1));
+  width: 24px;
+  height: 24px;
+  border: 2px solid;
+  border-bottom-color: transparent;
+}
+.gg-moon::after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 27px;
+  border: 2px solid transparent;
+  box-shadow: 0 0 0 2px;
+  top: 8px;
+  left: 2px;
+}

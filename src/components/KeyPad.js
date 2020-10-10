@@ -19,7 +19,9 @@ const KeyPad = () => {
       <button>2</button>
       <button>3</button>
       <button>+</button>
-      <button>&lt;</button>
+      <button>
+        <span className="gg-backspace"></span>
+      </button>
       <button>0</button>
       <button>.</button>
       <button>=</button>

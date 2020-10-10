@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+@import "./utils.scss";
+@import "./back-icon.scss";
+@import "./sun-icon.scss";
+@import "./moon-icon.scss";
+
+* {
+  @include theme-aware("color", "fore-color");
+  @include theme-aware("background", "color-background");
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.calculator {
+  @include theme-aware("box-shadow", "shadow");
+  padding: 2rem;
+  border-radius: 1rem;
+
+  input,
+  button {
+    outline: none;
+  }
+
+  input[type="text"]::-webkit-outer-spin-button,
+  input[type="text"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+  input[type="text"] {
+    -moz-appearance: textfield;
+  }
+
+  input[type="text"] {
+    @include theme-aware("box-shadow", "shadow-inset");
+    width: 100%;
+    background-color: inherit;
+    height: 3rem;
+    text-align: right;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 2rem 1rem;
+  }
+  .keypad {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.8rem;
+    margin-top: 2rem;
+  }
+
+  .keypad button {
+    @include theme-aware("box-shadow", "shadow");
+    @include theme-aware("background-color", "color-background");
+    height: 2rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+
+    &:hover,
+    &:active {
+      @include theme-aware("background-color", "button-hover-background");
+    }
+
+    &:active {
+      @include theme-aware("box-shadow", "shadow-inset");
+    }
+  }
+
+  .themeSwitcher {
+    cursor: pointer;
+    margin-bottom: 0.5rem;
+    i {
+      -webkit-transition: 0.2s;
+      transition: 0.2s;
+    }
+  }
+}

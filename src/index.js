@@ -2,9 +2,9 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
 
-import { store } from "./createStore";
-import Calculator from "./Calculator";
-import "./style.scss";
+import { store } from "./redux/createStore";
+import Calculator from "./components/Calculator";
+import "./theme/base.scss";
 
 const Main = () => {
   return (
